@@ -1,0 +1,12 @@
+ 
+ <p>
+  <strong>Title:</strong>
+  <%= @playlist.title %>
+</p>
+ 
+<p>
+  <strong>Song Link:</strong>
+  <a href="<%= @playlist.song_link %>"><%= @playlist.song_link %></a>
+</p>
+
+<%= link_to 'Back', playlist_index_path %>

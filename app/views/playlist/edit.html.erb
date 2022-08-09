@@ -1,0 +1,20 @@
+<h1>Edit Article</h1>
+ 
+<%= form_with(model: @playlist, local: true) do |form| %>
+  <p>
+    <%= form.label :title %><br>
+    <%= form.text_field :title %>
+  </p>
+ 
+  <p>
+    <%= form.label :song_link %><br>
+    <%= form.text_area :song_link %>
+  </p>
+ 
+  <p>
+    <%= form.submit %>
+  </p>
+ 
+<% end %>
+ 
+<%= link_to 'Back', playlist_index_path %>

@@ -1,0 +1,21 @@
+<header>
+  <h1>Welcome to your playlist</h1>
+  <img src="https://cdn.pixabay.com/photo/2016/06/13/16/29/man-1454591_960_720.png" alt="pixbay logo">
+</header>
+<%= form_with scope: :playlist, url: playlist_index_path, local: true do |form| %>
+  <p>
+    <%= form.label :title %><br>
+    <%= form.text_field :title %>
+  </p>
+ 
+  <p>
+    <%= form.label :song_link %><br>
+    <%= form.text_area :song_link %>
+  </p>
+ 
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', playlist_index_path %>
